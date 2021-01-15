@@ -18,11 +18,11 @@ Unfortunately, most of the projects don't "look" really good due to my lack of a
 
 ## Games
 
+Screenshots to be attached
 - In progress: Actively working on, still incomplete
 - Phase 1: Main mechanics implemented, roughly completed, no plan for release
 - Finished: Game fully completed and released
 </br>
-
   1. Countdown - Phase 1 \
     Recreated the British Game Show "Countdown" in Unity.\
     Was interested in the game and wanted to play it with my friends.\
