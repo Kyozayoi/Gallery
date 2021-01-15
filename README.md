@@ -25,6 +25,7 @@ Unfortunately, most of the projects don't "look" really good due to my lack of a
 
   1. Countdown - Phase 1 \
     Recreated the British Game Show "Countdown" in Unity.\
+    Was interested in the game and wanted to play it with my friends.\
     Features 2 teams that compete for points in 6 total rounds: 5 Numbers/Letters rounds, 1 Conundrum.\
     - Numbers round: Players are given 6 numbers from 2 distinct sets of "large" and "small" numbers.\
     Game provides a random 3 digit target number. \
@@ -32,9 +33,13 @@ Unfortunately, most of the projects don't "look" really good due to my lack of a
     - Letters round: Players are given 9 random letters from Consonants and Vowels.\
     Players must create the longest word possible with the provided letters.\
     - Conundrum: Players are given a scrambled 9 letter word.\
-    Players must find declare the unscrambled word.\
+    Players must find declare the unscrambled word.
     
   2. Tutti Shooter - Phase 1 \
-    Tutti Shooter
+    Top down 2D scroller arcade shooter game made in Unity.\
+    Concept was hashed out with friends, I was the sole developer on the "project".\
+    Features a fruit vs junk food theme, multiple weapon types, upgrades, and enemies.\
+    
+    
   3. Zenith - In progress \
-    Zenith
+    Infinite running game with more degrees of freedom than standard IF games like Temple Run or Subway Surfers.
