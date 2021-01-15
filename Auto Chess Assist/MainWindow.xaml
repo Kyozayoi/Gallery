@@ -1,0 +1,379 @@
+﻿<Window x:Class="AutoChessItemTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoChessItemTracker"
+        mc:Ignorable="d"
+        Title="Auto Chess Item Tracker" Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4.5*"/>
+            <RowDefinition Height=".3*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="Button_LoadFile"  Content="Load File"     Click="Click_LoadFile"   Width="150" Height="50" />
+            <Button Name="Button_NewGame"   Content="New Game"      Click="Click_NewGame"    Width="150" Height="50" />
+            <Button Name="Button_SaveStats" Content="Save Stats"    Click="Click_SaveStats"  Width="150" Height="50" />
+            <Button Name="Button_QuitApp"   Content="Shut Down"     Click="Click_ShutDown"   Width="150" Height="50" />
+
+        </StackPanel>
+
+
+        <TabControl Name="Supervisor" Grid.Row="1">
+            
+            <TabItem Header="Round 1">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Creeps 2" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep1"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep1" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep2"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep2" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round1" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round1, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round1" Maximum="2" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                    
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 2">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Creeps 3" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep3"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep3" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep4"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep4" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 3" Width="50"/>
+                        <TextBox Name="Creep5"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep5" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round2" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round2, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round2" Maximum="3" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Round 3">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Creeps 6" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep6"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep6" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep7"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep7" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 3" Width="50"/>
+                        <TextBox Name="Creep8"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep8" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 4" Width="50"/>
+                        <TextBox Name="Creep9"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep9" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 5" Width="50"/>
+                        <TextBox Name="Creep10"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep10" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 6" Width="50"/>
+                        <TextBox Name="Creep11"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep11" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round3" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round3, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round3" Maximum="6" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Round 10">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Golems 3" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep12"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep12" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep13"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep13" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 3" Width="50"/>
+                        <TextBox Name="Creep14"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep14" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round10" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round10, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round10" Maximum="3" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 15">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Wolves 5" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep15"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep15" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep16"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep16" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 3" Width="50"/>
+                        <TextBox Name="Creep17"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep17" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 4" Width="50"/>
+                        <TextBox Name="Creep18"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep18" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 5" Width="50"/>
+                        <TextBox Name="Creep19"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep19" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round15" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round15, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round15" Maximum="5" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 20">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Hellbears 2" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep20"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep20" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep21"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep21" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round20" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round20, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round20" Maximum="2" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 25">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Wildbirds 2" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep22"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep22" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep23"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep23" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round25" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round25, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round25" Maximum="2" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 30">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Thunderlizards 3" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep24"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep24" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep25"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep25" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 3" Width="50"/>
+                        <TextBox Name="Creep26"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep26" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round30" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round30, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round30" Maximum="3" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 35">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Dragon 1" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep27"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep27" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round35" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round35, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round35" Maximum="1" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 40">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Trolls 6" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep28"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep28" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 2" Width="50"/>
+                        <TextBox Name="Creep29"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep29" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 3" Width="50"/>
+                        <TextBox Name="Creep30"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep30" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 4" Width="50"/>
+                        <TextBox Name="Creep31"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep31" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 5" Width="50"/>
+                        <TextBox Name="Creep32"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep32" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 6" Width="50"/>
+                        <TextBox Name="Creep33"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep33" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round40" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round40, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round40" Maximum="6" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 45">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Year Beast 1" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep34"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep34" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round45" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round45, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round45" Maximum="1" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Round 50">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Roshan 1" HorizontalAlignment="Center" Height="30"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Item 1" Width="50"/>
+                        <TextBox Name="Creep35"  Width="400"/>
+                        <CheckBox Name="NoItem_Creep35" Checked="Creep_NoItem" Unchecked="Creep_HasItem" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="No Items" Width="60"/>
+                        <CheckBox Name="NoItem_Round50" Checked="Round_NoItems" Unchecked="Round_HasItems" Height="15"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Text="{Binding ElementName=Slider_Round50, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="25" />
+                        <Slider Name="Slider_Round50" Maximum="1" Width="300" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+        </TabControl>
+
+        <Button Name="TabControlNext" Grid.Row="2" Content="Next Round" Click="Click_NextTab" Width="100" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>
