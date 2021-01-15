@@ -23,16 +23,17 @@ Screenshots to be attached
 - Phase 1: Main mechanics implemented, roughly completed, no plan for release
 - Finished: Game fully completed and released
 </br>
+
   1. Countdown - Phase 1 \
-    Recreated the British Game Show "Countdown" in Unity.\
-    Was interested in the game and wanted to play it with my friends.\
-    Features 2 teams that compete for points in 6 total rounds: 5 Numbers/Letters rounds, 1 Conundrum.\
-    - Numbers round: Players are given 6 numbers from 2 distinct sets of "large" and "small" numbers.\
+    Recreated the British Game Show "Countdown" in Unity. \
+    Was interested in the game and wanted to play it with my friends. \
+    Features 2 teams that compete for points in 6 total rounds: 5 Numbers/Letters rounds, 1 Conundrum. \
+    - Numbers round: Players are given 6 numbers from 2 distinct sets of "large" and "small" numbers. \
     Game provides a random 3 digit target number. \
-    Players must use addition, subtraction, multiplication, and division with the 6 numbers to reach target number.\
-    - Letters round: Players are given 9 random letters from Consonants and Vowels.\
-    Players must create the longest word possible with the provided letters.\
-    - Conundrum: Players are given a scrambled 9 letter word.\
+    Players must use addition, subtraction, multiplication, and division with the 6 numbers to reach target number. \
+    - Letters round: Players are given 9 random letters from Consonants and Vowels. \
+    Players must create the longest word possible with the provided letters. \
+    - Conundrum: Players are given a scrambled 9 letter word. \
     Players must find declare the unscrambled word.
     
   2. Tutti Shooter - Phase 1 \
