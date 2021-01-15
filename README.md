@@ -1,5 +1,5 @@
 # Gallery
-The Gallery of Programming Projects I (Anthony Shih) feel comfortable sharing to others.\
+Programming Projects I (Anthony Shih) feel comfortable sharing to others.\
 These projects range from games to applications, and sometimes school projects.\
 Unfortunately, most of the projects don't "look" really good due to my lack of artistic ability, so a majority of this is to showcase proof of concepts.
 
