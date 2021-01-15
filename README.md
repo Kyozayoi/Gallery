@@ -38,7 +38,7 @@ Unfortunately, most of the projects don't "look" really good due to my lack of a
   2. Tutti Shooter - Phase 1 \
     Top down 2D scroller arcade shooter game made in Unity.\
     Concept was hashed out with friends, I was the sole developer on the "project".\
-    Features a fruit vs junk food theme, multiple weapon types, upgrades, and enemies.\
+    Features a fruit vs junk food theme, multiple weapon types, upgrades, and enemies.
     
     
   3. Zenith - In progress \
