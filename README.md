@@ -18,7 +18,7 @@ Unfortunately, most of the projects don't "look" really good due to my lack of a
 
 ## Games
 
-Screenshots to be attached
+Screenshots to be attached, Only included the scripts.
 - In progress: Actively working on, still incomplete
 - Phase 1: Main mechanics implemented, roughly completed, no plan for release
 - Finished: Game fully completed and released
