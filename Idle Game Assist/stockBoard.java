@@ -102,36 +102,36 @@ public class stockBoard {
             return result;
         }
 
-        int[] Investment = new int[] { 3, 0, -1 };
-        int[] Blackmail = new int[] { -3, -2, 3 };
-        int[] Donation = new int[] { 2, 0, -2 };
-        int[] Orgy = new int[] { -2, 2, 0 };
-        int[] ExtraTime = new int[] { 0, -3, 2 };
-        int[] Teambuilding = new int[] { 0, 3, -2 };
+        int[] Resource1 = new int[] { 3, 0, -1 };
+        int[] Resource2 = new int[] { -3, -2, 3 };
+        int[] Resource3 = new int[] { 2, 0, -2 };
+        int[] Resource4 = new int[] { -2, 2, 0 };
+        int[] Resource5 = new int[] { 0, -3, 2 };
+        int[] Resource6 = new int[] { 0, 3, -2 };
 
-        int[] IStart = addArrays(Investment, input);
-        int[] BStart = addArrays(Blackmail, input);
-        int[] DStart = addArrays(Donation, input);
-        int[] OStart = addArrays(Orgy, input);
-        int[] EStart = addArrays(ExtraTime, input);
-        int[] TStart = addArrays(Teambuilding, input);
+        int[] IStart = addArrays(Resource1, input);
+        int[] BStart = addArrays(Resource2, input);
+        int[] DStart = addArrays(Resource3, input);
+        int[] OStart = addArrays(Resource4, input);
+        int[] EStart = addArrays(Resource5, input);
+        int[] TStart = addArrays(Resource6, input);
 
-        result[currSize] = "Investment__";
+        result[currSize] = "Resource1";
         String[] Iresult = solveForHelper(IStart, result, currSize + 1);
 
-        result[currSize] = "Blackmail___";
+        result[currSize] = "Resource2";
         String[] Bresult = solveForHelper(BStart, result, currSize + 1);
 
-        result[currSize] = "Donation____";
+        result[currSize] = "Resource3";
         String[] Dresult = solveForHelper(DStart, result, currSize + 1);
 
-        result[currSize] = "Orgy________";
+        result[currSize] = "Resource4";
         String[] Oresult = solveForHelper(OStart, result, currSize + 1);
 
-        result[currSize] = "ExtraTime___";
+        result[currSize] = "Resource5";
         String[] Eresult = solveForHelper(EStart, result, currSize + 1);
 
-        result[currSize] = "Teambuilding";
+        result[currSize] = "Resource6";
         String[] Tresult = solveForHelper(TStart, result, currSize + 1);
 
         return null;
@@ -139,26 +139,26 @@ public class stockBoard {
 
     public static void solveFor(int[] input) {
 
-        int[] Investment = new int[] { 3, 0, -1 };
-        int[] Blackmail = new int[] { -3, -2, 3 };
-        int[] Donation = new int[] { 2, 0, -2 };
-        int[] Orgy = new int[] { -2, 2, 0 };
-        int[] ExtraTime = new int[] { 0, -3, 2 };
-        int[] Teambuilding = new int[] { 0, 3, -2 };
+        int[] Resource1 = new int[] { 3, 0, -1 };
+        int[] Resource2 = new int[] { -3, -2, 3 };
+        int[] Resource3 = new int[] { 2, 0, -2 };
+        int[] Resource4 = new int[] { -2, 2, 0 };
+        int[] Resource5 = new int[] { 0, -3, 2 };
+        int[] Resource6 = new int[] { 0, 3, -2 }
 
-        int[] IStart = addArrays(Investment, input);
-        int[] BStart = addArrays(Blackmail, input);
-        int[] DStart = addArrays(Donation, input);
-        int[] OStart = addArrays(Orgy, input);
-        int[] EStart = addArrays(ExtraTime, input);
-        int[] TStart = addArrays(Teambuilding, input);
+        int[] IStart = addArrays(Resource1, input);
+        int[] BStart = addArrays(Resource2, input);
+        int[] DStart = addArrays(Resource3, input);
+        int[] OStart = addArrays(Resource4, input);
+        int[] EStart = addArrays(Resource5, input);
+        int[] TStart = addArrays(Resource6, input);
 
-        String[] IString = new String[] { "Investment__", "", "", "", "" };
-        String[] BString = new String[] { "Blackmail___", "", "", "", "" };
-        String[] DString = new String[] { "Donation____", "", "", "", "" };
-        String[] OString = new String[] { "Orgy________", "", "", "", "" };
-        String[] EString = new String[] { "ExtraTime___", "", "", "", "" };
-        String[] TString = new String[] { "Teambuilding", "", "", "", "" };
+        String[] IString = new String[] { "Resource1", "", "", "", "" };
+        String[] BString = new String[] { "Resource1", "", "", "", "" };
+        String[] DString = new String[] { "Resource1", "", "", "", "" };
+        String[] OString = new String[] { "Resource1", "", "", "", "" };
+        String[] EString = new String[] { "Resource1", "", "", "", "" };
+        String[] TString = new String[] { "Resource1", "", "", "", "" };
 
         String[] Iresult = solveForHelper(IStart, IString, 1);
         String[] Bresult = solveForHelper(BStart, BString, 1);
